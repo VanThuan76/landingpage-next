@@ -2,10 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion"
-import { toast } from "sonner";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { PhoneCall } from "lucide-react";
-import { fakeData } from "@/shared/constants/fake";
 
 import { BackgroundLines } from "@/shared/components/ui/background-lines";
 import { TextHoverEffect } from "@/shared/components/ui/text-hover-effect";
@@ -27,27 +25,6 @@ export default function Home() {
     function handleJoinTele() {
         window.open("https://t.me/god9393", "_blank");
     }
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            const person = fakeData[index.current];
-            toast(`${person}`);
-
-            index.current++;
-
-            if (index.current === 10) {
-                setIntervalDuration(5000);
-            } else if (index.current === 20) {
-                setIntervalDuration(10000);
-            }
-
-            if (index.current >= fakeData.length) {
-                index.current = 0;
-            }
-        }, intervalDuration);
-
-        return () => clearInterval(intervalId);
-    }, [intervalDuration]);
 
     return (
         <BackgroundLines className="relative w-full h-screen">

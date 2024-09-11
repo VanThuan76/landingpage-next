@@ -14,8 +14,8 @@ import Providers from "../providers";
 const inter = Oswald({ subsets: ["latin"], weight: "700" });
 
 export const metadata: Metadata = {
-    title: "Shadcn - Landing template",
-    description: "Landing template from Shadcn",
+    title: "Tham gia nhận thưởng miễn phí",
+    description: "Tham gia ngay để có cơ hội nhận thưởng miễn phí",
 };
 
 export default async function RootLayout({
@@ -38,7 +38,6 @@ export default async function RootLayout({
                             <DialogContent className="h-screen max-w-md p-0 m-0 overflow-hidden border-none">
                                 {children}
                             </DialogContent>
-                            <Toaster position="top-right" toastOptions={{ className: 'bg-green-400 border border-green-600' }} />
                         </Dialog>
                     </Providers>
                 </body>
