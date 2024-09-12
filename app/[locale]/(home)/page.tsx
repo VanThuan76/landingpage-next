@@ -41,7 +41,7 @@ export default function Home() {
                     className="inline-flex w-[60%] h-16 animate-shimmer items-center justify-center rounded-full border-none bg-[linear-gradient(110deg,#f53d3d,45%,#ff9a9a,55%,#f53d3d)] bg-[length:200%_100%] px-2 font-medium text-slate-400 transition-colors shadow-[0_4px_8px_rgba(255,215,0,0.5)] focus:outline-none focus:ring-2 focus:ring-[#ffd700] focus:ring-offset-2 focus:ring-offset-slate-50"
                     onClick={() => handleLink()}
                 >
-                    <TextHoverEffect text="ĐĂNG KÝ NHẬN NGAY" className="text-4xl stroke-amber-700 fill-yellow-300" className2="text-4xl stroke-amber-700" height="100%" />
+                    <TextHoverEffect text="ĐĂNG KÝ NHẬN NGAY" className="text-3xl stroke-amber-700 fill-yellow-300" className2="text-3xl stroke-amber-700" height="100%" />
                 </motion.button>
 
                 <TextHoverEffect text="+ 59K" className="text-8xl stroke-white fill-red-600" className2="text-8xl stroke-red-900" strokeWidth="4" strokeWidth2="5" height="30%" />
