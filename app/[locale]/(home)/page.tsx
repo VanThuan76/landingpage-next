@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion"
 import { useRef, useState } from "react";
-import { PhoneCall } from "lucide-react";
+import { PhoneCall, Pointer } from "lucide-react";
 
 import { BackgroundLines } from "@/shared/components/ui/background-lines";
 import { TextHoverEffect } from "@/shared/components/ui/text-hover-effect";
@@ -11,16 +11,21 @@ import Confetti, { ConfettiRef } from "@/shared/components/ui/confetti";
 
 import SparklesText from "@/shared/components/ui/sparkles-text";
 import Pulsating from "@/shared/components/ui/pulsating";
+import { BorderBeam } from "@/shared/components/ui/border-bem";
 
 export default function Home() {
     const confettiRef = useRef<ConfettiRef>(null);
 
     function handleLink() {
-        window.open("https://god66.win/?f=61961", "_blank");
+        window.open("https://god66.club/?f=66450", "_blank");
     }
 
-    function handleJoinTele() {
-        window.open("https://t.me/god9393", "_blank");
+    function handleLinkTiktok() {
+        window.open("https://www.tiktok.com/business-suite/messages?from=homepage&lang=vi-VN", "_blank");
+    }
+
+    function handleLinkTele() {
+        window.open("https://t.me/thaihoangbro", "_blank");
     }
 
     return (
@@ -52,12 +57,44 @@ export default function Home() {
                     </SparklesText>
                 </Pulsating> */}
 
-                <div className="relative p-2 mt-10 bg-red-500 rounded-lg" onClick={() => handleJoinTele()}>
+                {/* <div className="relative p-2 mt-10 bg-red-500 rounded-lg" onClick={() => handleJoinTele()}>
                     <PhoneCall className="absolute w-10 h-10 text-white top-3 left-2" />
                     <PhoneCall className="absolute w-10 h-10 text-white animate-ping top-3 left-2" />
                     <TextHoverEffect text="HỖ TRỢ 24 / 24" height="100%" />
                     <PhoneCall className="absolute w-10 h-10 text-white top-3 right-2" />
                     <PhoneCall className="absolute w-10 h-10 text-white animate-ping top-3 right-2" />
+                </div> */}
+
+                <div className="relative flex items-center justify-center w-full gap-5 p-2 rounded-lg">
+                    <Pointer className="absolute w-12 h-12 text-white rotate-90 top-6 left-10" />
+                    <Pointer className="absolute w-12 h-12 text-white rotate-90 animate-right-bounce-rotate top-6 left-10" />
+
+                    <div className="relative w-[75px] h-[75px] overflow-hidden rounded-full" onClick={() => handleLinkTiktok()}>
+                        <Image
+                            width={100}
+                            height={100}
+                            alt="tiktok"
+                            src="/tiktok.png"
+                            priority={true}
+                            className="object-contain object-center w-full h-full"
+                        />
+                        <BorderBeam size={250} duration={12} delay={9} />
+                    </div>
+
+                    <div className="relative w-[68px] h-[68px] overflow-hidden rounded-full" onClick={() => handleLinkTele()}>
+                        <Image
+                            width={100}
+                            height={100}
+                            alt="telegram"
+                            src="/telegram.png"
+                            priority={true}
+                            className="object-contain object-center w-full h-full"
+                        />
+                        <BorderBeam size={250} duration={12} delay={9} />
+                    </div>
+
+                    <Pointer className="absolute w-12 h-12 text-white -rotate-90 top-6 right-10" />
+                    <Pointer className="absolute w-12 h-12 text-white -rotate-90 animate-left-bounce-rotate top-6 right-10" />
                 </div>
 
             </div>

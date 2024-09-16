@@ -91,6 +91,39 @@ module.exports = {
                     to: {
                         backgroundPosition: "-200% 0"
                     }
+                },
+                "border-beam": {
+                    "100%": {
+                        "offset-distance": "100%",
+                    },
+                },
+                'right-bounce-rotate': {
+                    '0%': {
+                        transform: 'translateX(0) rotate(90deg)',
+                        opacity: '0',
+                    },
+                    '50%': {
+                        transform: 'translateX(25px) rotate(90deg)',
+                        opacity: '0.5',
+                    },
+                    '100%': {
+                        transform: 'translateX(50px) rotate(90deg)',
+                        opacity: '1',
+                    },
+                },
+                'left-bounce-rotate': {
+                    '0%': {
+                        transform: 'translateX(0) rotate(-90deg)',
+                        opacity: '0',
+                    },
+                    '50%': {
+                        transform: 'translateX(-25px) rotate(-90deg)',
+                        opacity: '0.5',
+                    },
+                    '100%': {
+                        transform: 'translateX(-50px) rotate(-90deg)',
+                        opacity: '1',
+                    },
                 }
             },
             animation: {
@@ -100,6 +133,9 @@ module.exports = {
                 "collapsible-up": "collapsible-up 0.2s ease-in-out",
                 "shimmer": "shimmer 2s linear infinite",
                 "pulse": "pulse var(--duration) ease-out infinite",
+                "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+                'right-bounce-rotate': 'right-bounce-rotate 1s linear infinite alternate-reverse',
+                'left-bounce-rotate': 'left-bounce-rotate 1s linear infinite alternate-reverse',
             },
         },
     },
