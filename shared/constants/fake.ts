@@ -96,3 +96,8 @@ export const fakeData = [
     "Lê Văn Phương đã đăng ký",
     "Phạm Văn Vinh đã đăng ký"
 ]
+export const formattedFakeData = fakeData.map(name => ({
+    image: "https://w.ladicdn.com/s250x250/65f43e90c433ab00120211ce/335695399_768643991237428_2204681980755757001_n-20240619144653-y8thf.jpg",
+    name: name,
+    mins: Math.floor(Math.random() * 60) + 1
+}));

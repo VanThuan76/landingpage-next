@@ -11,7 +11,7 @@ import { Dialog, DialogContent } from "@/shared/components/ui/dialog";
 import Providers from "../providers";
 
 
-const inter = Oswald({ subsets: ["latin"], weight: "700" });
+const inter = Oswald({ subsets: ["latin"], weight: ["300", "700"] });
 
 export const metadata: Metadata = {
     title: "Tham gia nhận thưởng miễn phí",

@@ -76,6 +76,9 @@ html {
 /* *=========== Orange theme =========== */
 @layer base {
   :root {
+    --accent: #252527;
+    --base: #252527;
+    --scale: white;
     --background: 0 0% 100%;
     --foreground: 20 14.3% 4.1%;
 
@@ -152,4 +155,86 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.owText {
+    text-align: center;
+    -webkit-text-stroke: 2px white;
+    position: relative;
+    text-transform: uppercase;
+    color: var(--accent); /* Biến CSS */
+    font-size: 12vw;
+    letter-spacing: 1.2vw;
+    font-weight: 700;
+    text-shadow:
+        /* Viền chữ màu sáng */
+        0 1px 0 #ffeb99, /* lighten(@base, 15%) */
+        -1px -1px 0 #ffeb99,
+
+        /* Bóng 3D chính */
+        -1px 0px 0 #ffdb4d, /* lighten(@base, 6%) */
+        -2px 1px 0 #ffdb4d,
+        -3px 2px 0 #ffcc33, /* lighten(@base, 5%) */
+        -4px 3px 0 #ffbf00, /* lighten(@base, 4%) */
+        -5px 4px 0 #e6ac00, /* lighten(@base, 3%) */
+        -6px 5px 0 #cc9900, /* lighten(@base, 2%) */
+        -7px 6px 0 #b38600, /* lighten(@base, 1%) */
+        -8px 7px 0 var(--base), /* Màu vàng chính */
+        -9px 8px 0 #b37f00, /* darken(@base, 1%) */
+        -10px 9px 0 #996600, /* darken(@base, 2%) */
+        -11px 10px 0 #805500, /* darken(@base, 3%) */
+        -12px 11px 0 #664400, /* darken(@base, 4%) */
+        -13px 12px 0 #4d3300, /* darken(@base, 5%) */
+        -14px 13px 0 #332200, /* darken(@base, 6%) */
+        -15px 14px 0 #1a1100, /* darken(@base, 7%) */
+        -16px 15px 0 #0d0800 /* darken(@base, 8%) */
+
+        /* Top right */
+        0 -1px 1px var(--scale),
+        0 -2px 0px var(--scale),
+
+        /* Góc dưới bên trái */
+        -15px 14px 0px var(--scale),
+        -16px 15px 0px var(--scale),
+        -17px 16px 0px var(--scale),
+        -18px 17px 0px var(--scale),
+
+        -2px -1px 0 var(--scale),
+        -3px 0px 0 var(--scale),
+
+        /* Top left corner */
+        -19px 15px 0 var(--scale),
+        -18px 14px 0 var(--scale),
+        -17px 13px 0 var(--scale),
+        -16px 12px 0 var(--scale),
+        -15px 11px 0 var(--scale),
+        -14px 10px 0 var(--scale),
+        -13px 9px 0 var(--scale),
+        -12px 8px 0 var(--scale),
+        -11px 7px 0 var(--scale),
+        -10px 6px 0 var(--scale),
+        -9px 5px 0 var(--scale),
+        -8px 4px 0 var(--scale),
+        -7px 3px 0 var(--scale),
+        -6px 2px 0 var(--scale),
+        -5px 1px 0 var(--scale),
+        -4px 0px 0 var(--scale),
+
+        /* Lower right / Upper right for capital letters */
+        0px 2px 0px var(--scale),
+        -1px 3px 0px var(--scale),
+        -2px 4px 0px var(--scale),
+        -3px 5px 0px var(--scale),
+        -4px 6px 0px var(--scale),
+        -5px 7px 0px var(--scale),
+        -6px 8px 0px var(--scale),
+        -7px 9px 0px var(--scale),
+        -8px 10px 0px var(--scale),
+        -9px 11px 0px var(--scale),
+        -10px 12px 0px var(--scale),
+        -11px 13px 0px var(--scale),
+        -12px 14px 0px var(--scale),
+        -13px 15px 0px var(--scale),
+        -14px 16px 0px var(--scale),
+        -15px 17px 0px var(--scale);
 }
